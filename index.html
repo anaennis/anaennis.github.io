@@ -142,6 +142,7 @@
                                     <li>Workflow Orchestration</li>
                                     <li>Quality Control Automation</li>
                                     <li>Large-Scale Data Processing</li>
+                                    <li>AWS (S3, Lambda, Athena, IAM)</li>
                                 </ul>
                             </article>
 
@@ -165,6 +166,24 @@
                         </header>
 
                         <div class="features">
+                            <article>
+                                <h3>Event-Driven Compression Analysis on AWS</h3>
+                                <p>
+                                    Rebuilt a storage/compression trade-off analysis from my SLAC work as a small serverless pipeline on AWS.
+                                    Uploading a survey image to S3 triggers a Lambda function that recompresses it at seven precision levels,
+                                    measures reconstruction error, and writes a metadata table that Athena queries with SQL, without opening
+                                    any image. Across seven DECaLS cutouts, file size ranged from about 24% to 39.5% of lossless, and each
+                                    doubling of the precision level halved the error at a fixed cost of about 98 KB per image. The Lambda output
+                                    matched my local run byte for byte.
+                                    Code: <a href="https://github.com/anaennis/REPO-NAME" target="_blank">github.com/anaennis/REPO-NAME</a>.
+                                </p>
+                                <ul class="tags">
+                                    <li>AWS</li>
+                                    <li>S3</li>
+                                    <li>Lambda</li>
+                                    <li>Athena</li>
+                                </ul>
+                            </article>
                             <article>
                                 <h3>Automated Object Detection Pipeline</h3>
                                 <p>
